@@ -32,8 +32,6 @@ jobs:
             rm -rf interview;
             mkdir interview;
             cd interview;
-            echo pwd
-            git init;
             git clone git@github.com:fantienan/notes.git
             git checkout main;
             git pull origin main;
