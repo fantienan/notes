@@ -25,17 +25,16 @@ jobs:
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan "122.51.127.235" >> ~/.ssh/known_hosts
 
-      - name: deploy # 部署
+      - name: deploy # 部署 # git clone git@github.com:fantienan/notes.git
         run: |
           ssh root@122.51.127.235 "
-           ${{secrets.TENG_XUN_YUN_FOR_GITHUB_ID_RSA}} >> ~/.ssh/id_rsa;
             cd /home/study;
             rm -rf notes;
-            git clone git@github.com:fantienan/notes.git
+            git init;
+            git remote add origin https://oauth2:${{secrets.ACCESS_TOKEN}}@github.com/fantienan/notes.git;
             git checkout main;
             git pull origin main;
             git remote remove origin;
-            rm -rf ~/.ssh/id_rsa
             docker-compose build notes-service; 
             docker-compose up -d;
           "
