@@ -39,3 +39,5 @@ jobs:
             git pull origin main;
             git remote remove origin;
           "
+      - name: delete ssh key
+        run: rm -rf ~/.ssh/id_rsa
