@@ -21,7 +21,7 @@ jobs:
       - name: set ssh key
         run: |
           mkdir -p ~/.ssh/
-          echo "${{secrets.TENG_XUN_YUN.WFP_ID_RSA}}" > ~/.ssh/id_rsa
+          echo "${{secrets.TENG_XUN_YUN_ID_RSA}}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan "122.51.127.235" >> ~/.ssh/known_hosts
 
@@ -34,7 +34,7 @@ jobs:
             cd interview;
             echo pwd
             git init;
-            git remote add origin https://oauth2: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@github.com:fantienan/notes.git;
+            git remote add origin https://oauth2:${{TENG_XUN_YUN_ACCESS_TOKEN}}@github.com:fantienan/notes.git;
             git checkout main;
             git pull origin main;
             git remote remove origin;
