@@ -29,14 +29,12 @@ jobs:
         run: |
           ssh root@122.51.127.235 "
             cd /home/study;
-            rm -rf interview;
-            mkdir interview;
-            cd interview;
+            rm -rf notes;
             git clone git@github.com:fantienan/notes.git
             git checkout main;
             git pull origin main;
             git remote remove origin;
-            docker-compose build interview-service; 
+            docker-compose build notes-service; 
             docker-compose up -d;
           "
       - name: delete ssh key

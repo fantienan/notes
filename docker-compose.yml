@@ -1,10 +1,10 @@
 version: "3"
 services:
-  interview-service: # service name
+  notes-service: # service name
     build:
       context: . # 当前目录
       dockerfile: Dockerfile # 基于 Dockerfile 构建
-    image: interview-service # 依赖于当前 Dockerfile 创建镜像
-    container_name: interview-service
+    image: notes-service # 依赖于当前 Dockerfile 创建镜像
+    container_name: notes-service
     ports:
       - 8081:3100 # 宿主机通过 8081 访问
