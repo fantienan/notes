@@ -28,7 +28,7 @@ jobs:
       - name: deploy # 部署
         run: |
           ssh root@122.51.127.235 "
-            echo "${{secrets.TENG_XUN_YUN_FOR_GITHUB_ID_RSA}}" > ~/.ssh/id_rsa
+            echo "${{secrets.TENG_XUN_YUN_FOR_GITHUB_ID_RSA}}" > ~/.ssh/id_rsa;
             cd /home/study;
             rm -rf notes;
             git clone git@github.com:fantienan/notes.git
