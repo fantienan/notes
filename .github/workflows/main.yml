@@ -34,7 +34,7 @@ jobs:
             cd interview;
             echo pwd
             git init;
-            git remote add origin https://oauth2:${{TENG_XUN_YUN_ACCESS_TOKEN}}@github.com:fantienan/notes.git;
+            git remote add origin https://oauth2:${{secrets.TENG_XUN_YUN_ACCESS_TOKEN}}@github.com:fantienan/notes.git;
             git checkout main;
             git pull origin main;
             git remote remove origin;
