@@ -30,8 +30,9 @@ jobs:
           ssh root@122.51.127.235 "
             cd /home/study;
             rm -rf notes;
-            git init;
-            git remote add origin https://oauth2:${{secrets.ACCESS_TOKEN}}@github.com/fantienan/notes.git;
+            mkdir -p notes;
+            cd notes
+            git clone https://${{secrets.USERNAMR_FOR_GITHUB}}:${{secrets.PASSWORD_FOR_GITHUB}}@github.com/fantienan/notes.git;
             git checkout main;
             git pull origin main;
             git remote remove origin;
