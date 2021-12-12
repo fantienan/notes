@@ -1,0 +1,11 @@
+{
+  "description": "学习笔记",
+  "scripts": {
+    "start": "npx docsify serve --port 3100",
+    "server": "npx live-server ./ --port=3200 --ignore=node_modules,.git,.vscode"
+  },
+  "dependencies": {
+    "docsify-cli": "^4.4.3",
+    "live-server": "^1.2.1"
+  }
+}
