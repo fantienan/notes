@@ -35,9 +35,7 @@ jobs:
             echo pwd
             git init;
             git remote add origin https://oauth2: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@github.com:fantienan/notes.git;
-            git checkout dev;
-            git pull origin dev;
+            git checkout main;
+            git pull origin main;
             git remote remove origin;
           "
-      - name: delete ssh key # 删除 ssh key
-        run: rm -rf ~/.ssh/id_rsa
