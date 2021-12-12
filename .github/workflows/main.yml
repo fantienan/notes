@@ -38,6 +38,8 @@ jobs:
             git checkout main;
             git pull origin main;
             git remote remove origin;
+            docker-compose build interview-service; 
+            docker-compose up -d;
           "
       - name: delete ssh key
         run: rm -rf ~/.ssh/id_rsa
