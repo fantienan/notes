@@ -34,7 +34,6 @@ jobs:
             git checkout main;
             git pull origin main;
             git remote remove origin;
-            cp -rf /home/study/notes/notes/* /home/study/notes/
             docker-compose build notes-service; 
             docker-compose up -d;
           "
