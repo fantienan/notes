@@ -1,8 +1,9 @@
 {
   "description": "学习笔记",
   "scripts": {
-    "start": "npx docsify serve --port 3100",
-    "server": "npx live-server ./ --port=3200 --ignore=node_modules,.git,.vscode",
+    "start:dev": "npx docsify serve --port 3100",
+    "server:dev": "npx live-server ./ --port=3200 --ignore=node_modules,.git,.vscode",
+    "start:prd": "docsify serve --port 3100",
     "prd-dev": "cross-env NODE_ENV=prd_dev pm2 start bin/pm2-prd-dev.config.js",
     "prd": "pm2 start bin/www"
   },
