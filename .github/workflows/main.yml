@@ -30,12 +30,11 @@ jobs:
           ssh root@122.51.127.235 "
             cd /home/study;
             rm -rf notes;
-            mkdir -p notes;
-            cd notes
             git clone https://${{secrets.USERNAMR_FOR_GITHUB}}:${{secrets.PASSWORD_FOR_GITHUB}}@github.com/fantienan/notes.git;
             git checkout main;
             git pull origin main;
             git remote remove origin;
+            cp -rf /home/study/notes/notes/* /home/study/notes/
             docker-compose build notes-service; 
             docker-compose up -d;
           "
