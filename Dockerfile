@@ -1,7 +1,7 @@
 FROM node:latest
-LABEL description="A demo Dockerfile for build Docsify."
-WORKDIR /docs
+LABEL description="学习笔记"
+WORKDIR /notes-server
+COPY . /notes-server
 RUN npm set registry https://registry.npm.taobao.org/
-RUN npm install -g live-server@latest docsify-cli@latest
-RUN npm run server
-CMD npm run start
+RUN npm install -g live-server@latest docsify-cli@latest pm2@latest
+RUN npm run start

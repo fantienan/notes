@@ -1,0 +1,27 @@
+#!/usr/bin/env node
+const log = require("npmlog");
+const chalk = require("chalk");
+
+function execAsync(command, options) {
+  const win32 = process.platform === "win32";
+  const cmd = win32 ? "cmd" : command;
+  const cmdArgs = win32 ? ["/c"].concat(command) : undefined;
+  return require("child_process").spawnSync(cmd, cmdArgs, options || {});
+}
+
+function core() {
+  try {
+    const res = execAsync("npm run start", {
+      cwd: process.cwd(),
+      stdio: "inherit",
+    });
+    if (res.error) {
+      throw new Error(res.error);
+    }
+  } catch (e) {
+    log.error(chalk.redBright(e.message));
+    process.exit(1);
+  }
+}
+
+core();

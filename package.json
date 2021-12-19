@@ -2,10 +2,14 @@
   "description": "学习笔记",
   "scripts": {
     "start": "npx docsify serve --port 3100",
-    "server": "npx live-server ./ --port=3200 --ignore=node_modules,.git,.vscode"
+    "server": "npx live-server ./ --port=3200 --ignore=node_modules,.git,.vscode",
+    "prd-dev": "cross-env NODE_ENV=prd_dev pm2 start bin/pm2-prd-dev.config.js",
+    "prd": "pm2 start bin/www"
   },
   "dependencies": {
+    "cross-env": "^7.0.3",
     "docsify-cli": "^4.4.3",
-    "live-server": "^1.2.1"
+    "live-server": "^1.2.1",
+    "pm2": "^5.1.2"
   }
 }
