@@ -43,7 +43,7 @@
 - babel-JS 新语法编译工具，不关心模块化
 - webpack-打包构建工具，是多个 loader、plugin 的集合
 
-## 为何 Prixy 不能被 Polyfill
+## 为何 Proxy 不能被 Polyfill
 
 - class 可以用 function 模拟
 - promise 可以哦那个 callback 模拟
