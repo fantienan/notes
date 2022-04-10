@@ -19,3 +19,45 @@
     - [项目设计](docs/interview/v1/项目设计.md)
 
 - rust
+  - 环境
+    - [课程介绍与学习](docs/rust/1-环境/1-1课程介绍与学习指南.md)
+    - [环境安装](docs/rust/1-环境/2-1环境安装.md)
+    - [lsp 原理](docs/rust/1-环境/2-2lsp原理.md)
+    - [Cargo](docs/rust/1-环境/2-4Cargo.md)
+  - 数据类型
+    - [类型系统概述](docs/rust/3-数据类型/3-2%E7%B1%BB%E5%9E%8B%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0.md)
+    - [变量与可变性](docs/rust/3-数据类型/3-3%E5%8F%98%E9%87%8F%E5%92%8C%E5%8F%AF%E5%8F%98%E6%80%A7.md)
+    - [基础数据类型](docs/rust/3-数据类型/3-4%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B.md)
+    - [求两个无符号数的平均数](docs/rust/3-数据类型/3-5%E6%B1%82%E4%B8%A4%E4%B8%AA%E6%97%A0%E7%AC%A6%E5%8F%B7%E6%95%B0%E7%9A%84%E5%B9%B3%E5%9D%87%E6%95%B0.md)
+    - [整数溢出](docs/rust/3-数据类型/3-6%E6%95%B4%E6%95%B0%E6%BA%A2%E5%87%BA.md)
+    - [元组](docs/rust/3-数据类型/3-7%E5%85%83%E7%BB%84.md)
+    - [数组](docs/rust/3-数据类型/3-8%E6%95%B0%E7%BB%84.md)
+    - [切片类型](docs/rust/3-数据类型/3-9%E5%88%87%E7%89%87%E7%B1%BB%E5%9E%8B.md)
+    - [结构体](docs/rust/3-数据类型/3-10%E7%BB%93%E6%9E%84%E4%BD%93.md)
+    - [枚举](docs/rust/3-数据类型/3-11%E6%9E%9A%E4%B8%BE.md)
+    - [注释](docs/rust/3-数据类型/3-12%E6%B3%A8%E9%87%8A.md)
+    - [println 函数](docs/rust/3-数据类型/3-13println%E5%87%BD%E6%95%B0.md)
+    - [在不同类型之间的转换](docs/rust/3-数据类型/3-14%E5%9C%A8%E4%B8%8D%E5%90%8C%E7%B1%BB%E5%9E%8B%E4%B9%8B%E9%97%B4%E7%9A%84%E8%BD%AC%E6%8D%A2.md)
+  - 模块化
+    - [Rust 中的模块化编程](docs/rust/5-模块化/5-2Rust%E4%B8%AD%E7%9A%84%E6%A8%A1%E5%9D%97%E5%8C%96%E7%BC%96%E7%A8%8B.md)
+    - [pu 的可见性](docs/rust/5-模块化/5-3pu%E7%9A%84%E5%8F%AF%E8%A7%81%E6%80%A7.md)
+    - [结构体的可见性](docs/rust/5-模块化/5-4%E7%BB%93%E6%9E%84%E4%BD%93%E7%9A%84%E5%8F%AF%E8%A7%81%E6%80%A7.md)
+      [使用 use 绑定模块成员](docs/rust/5-模块化/5-5%E4%BD%BF%E7%94%A8use%E7%BB%91%E5%AE%9A%E6%A8%A1%E5%9D%97%E6%88%90%E5%91%98.md)
+      [使用 supper 与 self 简化模块路径](docs/rust/5-模块化/5-6%E4%BD%BF%E7%94%A8super%E4%B8%8Eself%E7%AE%80%E5%8C%96%E6%A8%A1%E5%9D%97%E8%B7%AF%E5%BE%84.md)
+    - [项目目录层次结构](docs/rust/5-模块化/5-7%E9%A1%B9%E7%9B%AE%E7%9B%AE%E5%BD%95%E5%B1%82%E6%AC%A1%E7%BB%93%E6%9E%84.md)
+  - 泛型
+    - [泛型作为函数参数的类型](docs/rust/6-泛型/6-2%E6%B3%9B%E5%9E%8B%E4%BD%9C%E4%B8%BA%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0%E7%9A%84%E7%B1%BB%E5%9E%8B.md)
+    - [结构体中的泛型](docs/rust/6-泛型/6-3%E7%BB%93%E6%9E%84%E4%BD%93%E4%B8%AD%E7%9A%84%E6%B3%9B%E5%9E%8B.md)
+    - [使用 Traits 定义共同的行为](docs/rust/6-泛型/6-4%E4%BD%BF%E7%94%A8Traits%E5%AE%9A%E4%B9%89%E5%85%B1%E5%90%8C%E7%9A%84%E8%A1%8C%E4%B8%BA.md)
+    - [自动派生](docs/rust/6-泛型/6-5%E8%87%AA%E5%8A%A8%E6%B4%BE%E7%94%9F.md)
+  - 所有权与生命周期
+    - [导读](docs/rust/7-所有权与生命周期/7-1%E5%AF%BC%E8%AF%BB.md)
+    - [所有权](docs/rust/7-所有权与生命周期/7-2%E6%89%80%E6%9C%89%E6%9D%83.md)
+    - [借用](docs/rust/7-所有权与生命周期/7-3%E5%80%9F%E7%94%A8.md)
+    - [生命周期](docs/rust/7-所有权与生命周期/7-4%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.md)
+    - [静态生命周期](docs/rust/7-所有权与生命周期/7-5%E9%9D%99%E6%80%81%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.md)
+  - 错误处理
+    - [导读](docs/rust/8-%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86/8-1%E5%AF%BC%E8%AF%BB.md)
+    - [不可修复错误](docs/rust/8-%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86/8-2%E4%B8%8D%E5%8F%AF%E6%81%A2%E5%A4%8D%E9%94%99%E8%AF%AF.md)
+    - [可修复错误](docs/rust/8-%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86/8-3%E5%8F%AF%E6%81%A2%E5%A4%8D%E9%94%99%E8%AF%AF.md)
+    - [自定义错误与问好表达式](docs/rust/8-%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86/8-4%E8%87%AA%E5%AE%9A%E4%B9%89%E9%94%99%E8%AF%AF%E4%B8%8E%E9%97%AE%E5%8F%B7%E8%A1%A8%E8%BE%BE%E5%BC%8F.md)
