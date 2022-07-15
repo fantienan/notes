@@ -19,6 +19,7 @@
     - [项目设计](docs/interview/v1/项目设计.md)
 
 - rust
+
   - 环境
     - [课程介绍与学习](docs/rust/1-环境/1-1课程介绍与学习指南.md)
     - [环境安装](docs/rust/1-环境/2-1环境安装.md)
@@ -61,3 +62,6 @@
     - [不可修复错误](docs/rust/8-%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86/8-2%E4%B8%8D%E5%8F%AF%E6%81%A2%E5%A4%8D%E9%94%99%E8%AF%AF.md)
     - [可修复错误](docs/rust/8-%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86/8-3%E5%8F%AF%E6%81%A2%E5%A4%8D%E9%94%99%E8%AF%AF.md)
     - [自定义错误与问好表达式](docs/rust/8-%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86/8-4%E8%87%AA%E5%AE%9A%E4%B9%89%E9%94%99%E8%AF%AF%E4%B8%8E%E9%97%AE%E5%8F%B7%E8%A1%A8%E8%BE%BE%E5%BC%8F.md)
+
+- js
+  - [实现 new_apply_call_bind 底层逻辑](docs/js/4-%E5%AE%9E%E7%8E%B0new_apply_call_bind%E5%BA%95%E5%B1%82%E9%80%BB%E8%BE%91.md)
