@@ -759,7 +759,7 @@ const CDN_PATH = 'http://cdn.adc.com'
 
 为什么只有 EX6 module 才能 tree shaking？ES6 Module 和 Commonjs 区别如下
 
-二者都是模块化的解决方案，前端使用 ES6 Module，node 使用 comminjs，通过 webpack 配置，前端代码也能使用 comminjs 规则
+二者都是模块化的解决方案，前端使用 ES6 Module，node 使用 comminjs，通过 webpack 配置，前端代码也能使用 commonjs 规则
 
 - ES6 Module 静态引入，编译时引入
 - Commonjs 动态引入，执行时引入

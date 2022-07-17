@@ -93,4 +93,41 @@ componentDidMount() {
     console.log(6, this.state.count);
   });
 }
+
+componentDidMount() {
+    this.setState({ count: this.state.count + 1 });
+    console.log(1, this.state.count);
+    this.setState({ count: this.state.count + 1 });
+    console.log(2, this.state.count);
+    this.setState(
+      (prevState) => {
+        return {
+          count: prevState.count + 1,
+        };
+      },
+      () => {
+        console.log(3, this.state.count);
+      },
+    );
+    this.setState(
+      (prevState) => {
+        return {
+          count: prevState.count + 1,
+        };
+      },
+      () => {
+        console.log(3.1, this.state.count);
+      },
+    );
+    console.log(4, this.state.count);
+    setTimeout(() => {
+      this.setState({ count: this.state.count + 1 });
+      console.log(5, this.state.count);
+    });
+    setTimeout(() => {
+      this.setState({ count: this.state.count + 1 });
+      console.log(6, this.state.count);
+    });
+    console.log('end');
+  }
 ```

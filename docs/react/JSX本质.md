@@ -1,0 +1,3 @@
+- React.createElement 返回 vnode
+- 第一个参数可能是组件也可能是 html tag
+- 组件名首字母必须大写，与 html tag 做区分，（React 规定）

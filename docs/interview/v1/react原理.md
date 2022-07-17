@@ -36,3 +36,44 @@
 ## setState 更新机制、batchUpdate 机制、transacton 事务机制
 
 参考：https://blog.csdn.net/qq_39207948/article/details/113803273?utm_source=app&app_version=4.17.0
+
+## 组件渲染和更新过程
+
+- JSX 如何渲染
+- setState 之后如何更新页面
+- 考察全流程
+- 组件渲染和更新过程
+- 更新的两个阶段
+- React fiber
+
+### 组件渲染过程
+
+- props state
+- render() 生成 vnode
+- patch(elem, vnode)
+
+### 组件更新过程
+
+- setState(newState) ==> dirtyComponent
+- render() 生成 newVnode
+- patch(vnode, newVnode)
+
+## fiber 如何性能优化
+
+### 更新的两个阶段
+
+- patch 被拆分为两个阶段：
+  - reconciliation 阶段 - 执行 diff 算法，纯 JS 计算
+  - commit 阶段 - 将 diff 结果渲染 DOM
+
+### 可能会有的性能问题
+
+- JS 是单线程并且与 DOM 渲染共用一个线程
+- 当组件足够复杂，组件更新时计算和渲染都压力大
+- 同时再有 DOM 操作（动画，鼠标拖拽等）将卡顿
+
+### 解决方案 fiber
+
+- 将 reconciliation 阶段进行任务拆分（commit 无法拆分）
+- DOM 需要渲染时暂停，空闲时恢复
+- window.requestIdleCallback
