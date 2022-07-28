@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script type="module">
+      const clone = function (parent, child) {
+        // 使用Object.create可以减少组合继承中多进行一次构造的过程 child.prototype = new parent()
+        child.prototype = Object.create(parent.prototype);
+        child.prototype.constructor = child;
+      };
+      const Parent = function () {
+        this.name = "parent";
+        this.arr = ["p1"];
+      };
+
+      Parent.prototype.getName = function () {
+        return this.name;
+      };
+
+      const Child = function () {
+        Parent.call(this);
+        this.type = "child";
+      };
+
+      clone(Parent, Child);
+
+      Child.prototype.getArr = function () {
+        return this.arr;
+      };
+
+      const c1 = new Child();
+      const c2 = new Child();
+      c2.arr.push("1");
+      console.log(c1.name);
+      console.log(c1.getName());
+      console.log(c1.getArr());
+      console.log(c2.getArr());
+    </script>
+  </body>
+</html>
