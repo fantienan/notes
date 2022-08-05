@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script type="module">
+      function _new(ctor, ...args) {
+        if (typeof ctor !== "function") {
+          return "必须是一个函数";
+        }
+        const obj = new Object();
+        obj.__proto__ = Object.create(ctor.prototype);
+        const res = ctor.apply(obj, ...args);
+        return (res !== null && typeof res === "function") ||
+          typeof res === "object"
+          ? res
+          : obj;
+      }
+
+      function Parent({ name } = {}) {
+        this.name = name ?? "p";
+      }
+
+      Parent.prototype.getName = function () {
+        return this.name;
+      };
+
+      const p = _new(Parent, { name: 1 });
+      const p1 = new Parent({ name: 1 });
+      debugger;
+    </script>
+  </body>
+</html>
